@@ -1,20 +1,22 @@
 import React, { useEffect } from "react";
-import { Button } from "@/components/ui/Button";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "@/index.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Button } from "@/components/ui/Button"; //import component button
+import { Swiper, SwiperSlide } from "swiper/react"; //import component swiper
+import "swiper/css"; //import css swiper
+import "swiper/css/effect-fade"; //import css swiper effect fade
+import "swiper/css/navigation"; //import css swiper navigation
+import "swiper/css/pagination"; //import css swiper pagination
+import "@/index.css"; //import css index
+import AOS from "aos"; //library animasi
+import "aos/dist/aos.css"; //library animasi
 
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules"; //import swiper modules
 
 function Sliders() {
   useEffect(() => {
-    AOS.init();
+    //fungsi useeffect untuk menjalankan hanya sekali
+    AOS.init(); //mengaktifkan animasi scroll
   }, []);
+  //array data slider
   const sliderItems = [
     {
       title1: "Lessons and insights",
@@ -39,7 +41,9 @@ function Sliders() {
     },
   ];
   return (
+    //data-aos digunakan untuk memilih jenis animasinya
     <div className="w-full md:h-[80vh] h-[85vh] bg-[#F5F7FA]" data-aos="fade-in">
+      {/* slider yang saya gunakan swiper  */}
       <Swiper
         spaceBetween={30}
         loop={true}

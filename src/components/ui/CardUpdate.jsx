@@ -1,7 +1,7 @@
 import React from "react";
 
 function CardUpdate(props) {
-  const { key, img, title } = props;
+  const { key, img, title } = props; //fungsi props untuk mengoper data antar komponen
   return (
     <>
       <div key={key} className="rounded-lg relative md:mb-0 mb-20">

@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
-import { Button } from "@/components/ui/Button";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { Button } from "@/components/ui/Button"; //import component button
+import AOS from "aos"; //library animasi
+import "aos/dist/aos.css"; //library animasi
 
 function Calender() {
   useEffect(() => {
-    AOS.init();
+    //fungsi useeffect untuk menjalankan hanya sekali
+    AOS.init(); //mengaktifkan animasi scroll
   }, []);
   return (
     <div className="md:flex items-center max-w-screen-xl md:px-0 px-4 mx-auto py-16 overflow-x-hidden">
+      {/* data-aos digunakan untuk memilih jenis animasinya  */}
       <div className="md:w-1/2" data-aos="fade-right">
         <img src="/images/calender.png" alt="Illustration" className="w-full" />
       </div>

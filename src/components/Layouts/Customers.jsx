@@ -1,16 +1,18 @@
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/Button";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import AOS from "aos"; //library animasi
+import "aos/dist/aos.css"; //library animasi
 
 function Customer() {
   useEffect(() => {
-    AOS.init();
+    //fungsi useeffect untuk menjalankan hanya sekali
+    AOS.init(); //mengaktifkan animasi scroll
   }, []);
   return (
     <div className="bg-[#F5F7FA]">
       <div className="max-w-screen-xl md:px-0 px-4 mx-auto py-10">
         <div className="md:flex items-center overflow-x-hidden">
+          {/* data-aos digunakan untuk memilih jenis animasinya  */}
           <div className="md:w-2/5 flex items-center md:justofy-start justify-center rounded-md" data-aos="fade-right">
             <img src="/images/tesla.png" alt="Logo" className="h-auto w-[90%]" />
           </div>
@@ -36,10 +38,10 @@ function Customer() {
                 <img src="images/clients/client-4.png" alt="Logo 4" className="w-12" />
               </div>
               <div className="w-1/3 md:w-auto flex md:justify-start justify-center">
-                <img src="images/clients/client-5.png" alt="Logo 3" className="w-12" />
+                <img src="images/clients/client-5.png" alt="Logo 5" className="w-12" />
               </div>
               <div className="w-1/3 md:w-auto flex md:justify-start justify-center">
-                <img src="images/clients/client-6.png" alt="Logo 4" className="w-12" />
+                <img src="images/clients/client-6.png" alt="Logo 6" className="w-12" />
               </div>
               <div className="w-1/3 md:w-auto flex md:justify-start justify-center">
                 <Button variant="gosht" className="text-[#4CAF4F]">

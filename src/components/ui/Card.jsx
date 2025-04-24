@@ -1,7 +1,7 @@
 import React from "react";
 
 function Card(props) {
-  const { key, img, title, desc } = props;
+  const { key, img, title, desc } = props; //fungsi props untuk mengoper data antar komponen
   return (
     <>
       <div key={key} className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
